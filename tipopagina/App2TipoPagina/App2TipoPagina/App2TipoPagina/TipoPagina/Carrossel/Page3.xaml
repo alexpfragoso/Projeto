@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2TipoPagina.TipoPagina.Carrossel.Page3"
+             BackgroundColor="LightSkyBlue">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" >
+
+            <Label Text="Pagina 3!" TextColor="Blue"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Image="play.jpg" Clicked="MudarPagina"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

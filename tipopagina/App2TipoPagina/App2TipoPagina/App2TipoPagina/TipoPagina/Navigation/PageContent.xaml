@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2TipoPagina.TipoPagina.Navigation.PageContent">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="abrir" Icon="open.png"/>
+        <ToolbarItem Text="salvar" Icon="save.png"/>
+        <ToolbarItem Text="fechar" Icon="close.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Ir pagina 2" Clicked="MudarPagina2"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
