@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEventos.Paginas.EditarEventos"
+              Title="Editar Eventos"
+             BackgroundColor="#E6E6FA">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Vertical" Padding="7" BackgroundColor="#708090">
+                <Label Text="" FontSize="3"/>
+                <Entry Placeholder="Pesquisar" TextChanged="PesquisarAction" BackgroundColor="#E6E6FA"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text=" " FontSize="12"/>
+                    <Label x:Name="EventosCount" FontSize="12" TextColor="#FA8072"/>
+                    <Label Text=" Eventos encontrados" FontSize="12" TextColor="#FA8072"/>
+                </StackLayout>
+                <Label Text="" FontSize="3"/>
+            </StackLayout>
+
+            <ListView x:Name="ListViewEventos" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid BackgroundColor="#708090">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="120"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="90"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout  Grid.Column="0">
+                                    <Image Source="eventosample.jpg" Aspect="AspectFill"/>
+                                </StackLayout>
+
+                                <StackLayout Grid.Column="1">
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text=" {Binding Nome}" FontAttributes="Bold" TextColor="#FA8072" Font="16" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text=" {Binding Data}" TextColor="WhiteSmoke"/>
+                                    </StackLayout>
+                                    <Label Text=" {Binding Local}" TextColor="WhiteSmoke"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Vertical" Grid.Column="2">
+                                    <Label Text=" "/>
+                                    <StackLayout Orientation="Horizontal"  Grid.Column="2">
+                                        <Label Text="+Editar" TextColor="#FFA500">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="EditarAction" CommandParameter="{Binding .}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label Text="|"  TextColor="#FFA500"/>
+                                        <Label Text="+Excluir " TextColor="#FFA500">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ExcluirAction" CommandParameter="{Binding .}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </StackLayout>
+                                </StackLayout>
+
+
+
+                            </Grid>
+                        </ViewCell>
+                       
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

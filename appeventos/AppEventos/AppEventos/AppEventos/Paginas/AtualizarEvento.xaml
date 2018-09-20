@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEventos.Paginas.AtualizarEvento"
+              Title="Editar Evento"
+              BackgroundColor="#708090" Padding="7">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#708090" Padding="7">
+                <StackLayout BackgroundColor="#E6E6FA" Padding="5">
+                    <Entry x:Name="Nome" Placeholder="Nome"/>
+                    <Entry x:Name="Local" Placeholder="Local"/>
+                    <Entry x:Name="Data" Placeholder="Data"/>
+                    <Entry x:Name="Horario" Placeholder="Horario"/>
+
+
+                </StackLayout>
+                <StackLayout BackgroundColor="#E6E6FA" Padding="5">
+                    <Label Text="Descrição" FontSize="Medium"/>
+                    <Editor x:Name="Descricao" HeightRequest="100"/>
+                    <Entry x:Name="Valor" Placeholder="Valor da entrada"/>
+
+                </StackLayout>
+                <StackLayout BackgroundColor="#E6E6FA" Padding="5">
+                    <Entry x:Name="Telefone" Placeholder="Telefone"/>
+                    <Entry x:Name="Email" Placeholder="Email"/>
+                    <Entry x:Name="Organizador" Placeholder="Organizador"/>
+                    <Entry x:Name="Site" Placeholder="Site"/>
+                    <Entry x:Name="Imagem" Placeholder="Imagem"/>
+
+                </StackLayout>
+                <StackLayout BackgroundColor="#708090" Padding="7">
+                    <Button Text="Salvar" Clicked="SalvarAction" TextColor="WhiteSmoke" BackgroundColor="#FFA500"/>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEventos.Paginas.DetalhesEvento"
+              Title="Mais Informações"
+             BackgroundColor="#E6E6FA">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Label Text="" FontSize="Large"></Label>
+                
+                
+
+                <StackLayout Orientation="Vertical" BackgroundColor="#708090">
+                    <Label Text="" FontSize="5"></Label>
+                    <Label Text=" {Binding Nome}" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#FA8072"/>
+                    <Image Source="eventosample.jpg" Aspect="AspectFill" HorizontalOptions="Center"/>
+                    <StackLayout Padding="3">
+                        <Label Text="{Binding Descricao}" FontSize="Medium" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
+                    </StackLayout>
+                    
+                    <Label Text="" FontSize="5"></Label>
+                    <Grid BackgroundColor="#708090">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="190"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        <StackLayout  Grid.Column="0">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text=" Local:" FontAttributes="Bold" TextColor="#FFA500"/>
+                                <Label Text=" {Binding Local}" TextColor="WhiteSmoke"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text=" Organizador:" FontAttributes="Bold" TextColor="#FFA500"/>
+                                <Label Text=" {Binding Organizador}" TextColor="WhiteSmoke"/>
+                               
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text=" Entrada:" FontAttributes="Bold" TextColor="#FFA500"/>
+                                <Label Text=" {Binding Valor}" TextColor="WhiteSmoke"/>
+                            </StackLayout>                                      
+                        </StackLayout>
+                        
+                        
+                        <StackLayout  Grid.Column="1">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Data:" FontAttributes="Bold" TextColor="#FFA500"/>
+                                <Label Text=" {Binding Data}" TextColor="WhiteSmoke"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Horario:" FontAttributes="Bold" TextColor="#FFA500"/>
+                                <Label Text=" {Binding Horario}" TextColor="WhiteSmoke"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Telefone:" FontAttributes="Bold" TextColor="#FFA500"/>
+                                <Label Text=" {Binding Telefone}" TextColor="WhiteSmoke"/>
+                            </StackLayout>                                                  
+                        </StackLayout>
+                        
+                    </Grid>
+
+
+                    <StackLayout Orientation="Horizontal">
+                            <Label Text=" Email:" FontAttributes="Bold" TextColor="#FFA500"/>
+                            <Label Text=" {Binding Email}" TextColor="WhiteSmoke"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text=" Site:" FontAttributes="Bold" TextColor="#FFA500"/>
+                            <Label Text=" {Binding Site}" TextColor="WhiteSmoke"/>
+                        </StackLayout>
+                    <Label Text="" FontSize="5"/>
+
+
+                </StackLayout>
+                
+                
+
+
+
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>
