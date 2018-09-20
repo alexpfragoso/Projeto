@@ -16,15 +16,13 @@ namespace AppEventos.Paginas
 	{
 
         List<Evento> lista { get; set; }
+        Database database;
 
-		public ListaEventos ()
+        public ListaEventos ()
 		{
 			InitializeComponent ();
-            Database database = new Database();
-            lista = database.ListarEventos();
-            ListViewEventos.ItemsSource = lista;
+            database = new Database();
 
-            EventosCount.Text = lista.Count.ToString();
 		}
 
         public void CadastrarEvento(object sender, EventArgs args) {
@@ -51,6 +49,14 @@ namespace AppEventos.Paginas
 
             ListViewEventos.ItemsSource = lista.Where(a => a.Nome.Contains(args.NewTextValue)).ToList();
             
+        }
+
+        protected override void OnAppearing(){
+            base.OnAppearing();
+
+            lista = database.ListarEventos();
+            EventosCount.Text = lista.Count.ToString();
+            ListViewEventos.ItemsSource = lista;
         }
 
 
