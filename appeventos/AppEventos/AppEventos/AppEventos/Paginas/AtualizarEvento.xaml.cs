@@ -16,7 +16,7 @@ namespace AppEventos.Paginas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AtualizarEvento : ContentPage
 	{
-        public string imagem = "eventosample.jpg";
+        public string imagem;
         private Evento evento { get; set; }
 
 
@@ -36,6 +36,7 @@ namespace AppEventos.Paginas
             Email.Text = evento.Email;
             Site.Text = evento.Site;
             Imagem.Source = evento.Imagem;
+            imagem = evento.Imagem;
                         
         }
         public void SalvarAction(object sender, EventArgs args)
