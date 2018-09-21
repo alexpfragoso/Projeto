@@ -14,7 +14,7 @@
                 <StackLayout Orientation="Vertical" BackgroundColor="#708090">
                     <Label Text="" FontSize="5"></Label>
                     <Label Text=" {Binding Nome}" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#FA8072"/>
-                    <Image Source="eventosample.jpg" Aspect="AspectFill" HorizontalOptions="Center"/>
+                    <Image Source=" {Binding Imagem}" Aspect="AspectFill" HorizontalOptions="Center"/>
                     <StackLayout Padding="3">
                         <Label Text="{Binding Descricao}" FontSize="Medium" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
                     </StackLayout>

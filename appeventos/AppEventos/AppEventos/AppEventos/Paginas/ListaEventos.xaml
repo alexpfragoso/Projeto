@@ -44,7 +44,7 @@
                                     <RowDefinition Height="80"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <StackLayout  Grid.Column="0">
-                                    <Image Source="eventosample.jpg" Aspect="AspectFill" VerticalOptions="CenterAndExpand"/>
+                                    <Image Source=" {Binding Imagem}" Aspect="AspectFill" VerticalOptions="CenterAndExpand"/>
                                 </StackLayout>
                                 
                                     <StackLayout Grid.Column="1">

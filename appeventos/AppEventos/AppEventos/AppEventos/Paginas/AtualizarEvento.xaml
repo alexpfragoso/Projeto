@@ -26,9 +26,21 @@
                     <Entry x:Name="Email" Placeholder="Email"/>
                     <Entry x:Name="Organizador" Placeholder="Organizador"/>
                     <Entry x:Name="Site" Placeholder="Site"/>
-                    <Entry x:Name="Imagem" Placeholder="Imagem"/>
-
+                    
                 </StackLayout>
+                <StackLayout>
+
+                    <Image x:Name="Imagem" />
+
+                    
+                                    
+                    
+
+                    <Button Text="Escolher Foto" Clicked="EscolherFoto" TextColor="WhiteSmoke" BackgroundColor="#FA8072"/>
+
+                   
+                </StackLayout>
+                
                 <StackLayout BackgroundColor="#708090" Padding="7">
                     <Button Text="Salvar" Clicked="SalvarAction" TextColor="WhiteSmoke" BackgroundColor="#FFA500"/>
                 </StackLayout>
